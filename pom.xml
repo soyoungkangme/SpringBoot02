@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.7.1</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.rubypaper</groupId>
+	<artifactId>SpringBoot02</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>SpringBoot02</name>
+	<description>Demo project for Spring Boot</description>
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- 
+		<dependency> 
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-core</artifactId> 
+			<version>6.1.0.Final</version>
+			<type>pom</type>
+	    </dependency> 
+	    mavenrepository.com - hibernate core - 6.1.0 에서 복사해옴, 디펜던시 추가하면 라이브러리 추가됨 => 이것보다 더 많은 라이브러리 필요함 
+		=> 스타터 = 관련된 라이브러리들의 묶음 (모듈별로 존재) (spring-boot-starter-모듈명) 
+	    -->
+	    
+	    <!--  
+	    // ctrl+space, add starter, 스타터 선택, pom.xml 
+	    data-jpa 모듈 스타터 하나 추가하면 필요한 모든 라이브러리들 추가됨 (필요한 라이브러리 직접 찾거나 버전관리 안해도됨)
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		
+		
+		// mybatis, spring 연동할때 필요한 라이브러들 
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>2.2.2</version>
+		</dependency>
+		
+		// web
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency> 
+		-->
+		
+		<!-- 사용자 정의 스타터 (board-spring-boot-starter) -> 3개의 라이브러리 등록되어 있음 -->
+		<dependency>
+		    <groupId>com.rubypaper</groupId>
+	        <artifactId>board-spring-boot-starter</artifactId>
+	        <version>0.0.1-SNAPSHOT</version>
+	    </dependency>
+	    
+	    
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+	</dependencies>
+
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
